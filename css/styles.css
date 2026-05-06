@@ -8,8 +8,9 @@
 /* Variáveis CSS */
 :root {
     --color-light : #f4f4f4;
-    --color-dark: #222;
+    --color-dark: #111111;
     --color-orange: #ff6600;
+    --color-orange-alpha: rgba(255, 102, 0, .25);
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 30px;
@@ -88,7 +89,7 @@ ul, ol {
     border: 2px solid var(--color-orange);
     padding: var(--spacing-sm) var(--spacing-lg);
     border-radius: 80px;
-    background-color: var(--color-orange);
+    background-color: var(--color-orange-alpha);
     transition: .5s;
 }
 .btn:hover{
@@ -104,7 +105,41 @@ ul, ol {
     50%{transform: translateX(20px);}
     
 }
+
+.motos {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.motos h2{
+font-size: 6vmin;
+padding: var(--spacing-lg);
+
+}
+.grid-motos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:var(--spacing-lg) ;
+
+.moto-item{
+    width: 30%;
+    border: 1px solid var(--color-orange-aloha);
+    box-shadow: 1px 1px 10px var(--color-orange-alpha);
+    border-radius: 15px;
+    padding: var(--spacing-lg);
+    text-align: center;
+
+}
+
+.moto-item img{
+    width: 70%;
+    border-radius: 15px;
+}
+
+
 .container{
-    height: 100vh;
+    min-height: 100vh;
 
 }
