@@ -117,11 +117,13 @@ padding: var(--spacing-lg);
 
 }
 .grid-motos{
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap:var(--spacing-lg) ;
+}
 
 .moto-item{
     width: 30%;
@@ -130,16 +132,60 @@ padding: var(--spacing-lg);
     border-radius: 15px;
     padding: var(--spacing-lg);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    transition: 1s;
+    animation: viewAnimation both;
+    animation-timeline: view(70% 20%);
 
+}
+.moto-item:hover{
+    scale: 1.1;
 }
 
 .moto-item img{
     width: 70%;
     border-radius: 15px;
 }
-
-
-.container{
-    min-height: 100vh;
-
+.moto-item h3{
+    font-size: 3vmin;
 }
+.moto-item p{
+    width: 70%;
+    text-wrap: balance;
+    line-height: 1.6;
+}
+
+/* animação para os cards */
+@keyframes viewAnimation {
+    
+    from{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+.container {
+    min-height: 100vh;
+}
+
+/* design responsivo */
+@media  (width <= 950px){
+ .moto-item{
+    width: 45%;
+ }
+}
+@media (width <= 650px) {
+    .moto-item{
+        width: 90%;
+    }
+}
+    
